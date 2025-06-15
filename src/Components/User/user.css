@@ -1,0 +1,9 @@
+.user{
+    border: 2px solid olive;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+/* .grid{
+    display: grid;
+    grid-template-columns: (3,1fr);
+} */
