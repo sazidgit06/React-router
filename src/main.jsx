@@ -3,28 +3,33 @@ import { createRoot } from 'react-dom/client'
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
+} from "react-router";
 import './index.css'
 import App from './App.jsx'
+import Home from './Components/Home/Home.jsx';
+import About from './Components/About us/About.jsx';
+import Contact from './Components/Contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
-  },
-  {
-    path:"/about",
-    element: <div>I am in now about section</div>
-  },
-  {
-    path: "/book",
-    element: <div>Now i can purchase books</div>
+    element: <Home></Home>,
+    children:[
+      {
+        path: "/about",
+        element: <About></About>
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
+      }
+    ]
   }
-]);
+])
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}></RouterProvider>
   </StrictMode>,
 )
