@@ -12,3 +12,10 @@
     background-color: white;
     color: black;
 }
+
+nav a.active{
+    background-color: olivedrab;
+    color: white;
+    padding: 2px;
+    border-radius: 2px;
+}
